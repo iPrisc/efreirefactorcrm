@@ -7,9 +7,9 @@ import (
 )
 
 func main() {
-	store, err := storage.NewJSONStore("contacts.json")
+	store, err := storage.NewGORMStore("contacts.db")
 	if err != nil {
-		fmt.Printf("Erreur initialisation JSON store: %v\n", err)
+		fmt.Printf("Erreur GORM: %v\n", err)
 		return
 	}
 

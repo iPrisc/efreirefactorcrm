@@ -1,12 +1,12 @@
 [
   {
-    "ID": 2,
-    "Name": "Salut",
-    "Email": "mdr@"
+    "id": 2,
+    "name": "Salut",
+    "email": "mdr@"
   },
   {
-    "ID": 3,
-    "Name": "Bonjout",
-    "Email": "BOn@"
+    "id": 3,
+    "name": "Bonjout",
+    "email": "BOn@"
   }
 ]
