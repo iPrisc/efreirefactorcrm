@@ -7,7 +7,6 @@ type MemoryStore struct {
 	nextID   int
 }
 
-// NewMemoryStore est un constructeur qui initialise proprement notre storer
 func NewMemoryStore() *MemoryStore {
 	return &MemoryStore{
 		contacts: make(map[int]*Contact),
@@ -33,7 +32,7 @@ func (ms *MemoryStore) GetAll() ([]*Contact, error) {
 func (ms *MemoryStore) GetByID(id int) (*Contact, error) {
 	contact, ok := ms.contacts[id]
 	if !ok {
-		return nil, errors.New("Contact not found")
+		return nil, errors.New("Contact non trouvé")
 	}
 	return contact, nil
 }
@@ -54,7 +53,7 @@ func (ms *MemoryStore) Update(id int, newName, newEmail string) error {
 
 func (ms *MemoryStore) Delete(id int) error {
 	if _, ok := ms.contacts[id]; !ok {
-		return errors.New("Contact not found")
+		return errors.New("Contact non trouvé")
 	}
 	delete(ms.contacts, id)
 	return nil

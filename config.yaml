@@ -1,0 +1,13 @@
+storage:
+  type: "gorm"  
+  
+  gorm:
+    database: "contacts.db"
+
+  json:
+    file: "contacts.json"
+
+app:
+  name: "Mini-CRM CLI"
+  version: "1.0.0"
+  description: "Gestionnaire de contacts "
